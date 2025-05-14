@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/GlobalStyle.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
