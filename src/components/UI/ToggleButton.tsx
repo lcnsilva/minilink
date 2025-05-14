@@ -13,11 +13,11 @@ const ButtonContainer = styled.label`
     height: 0;
 
     &:checked + span {
-      background-color: #2463EB;
+      background-color: #4B5945;
     }
 
     &:focus + span {
-      box-shadow: 0 0 1px #2463EB;
+      box-shadow: 0 0 1px #4B5945;
     }
 
     &:checked + span::before {

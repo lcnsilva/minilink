@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+const size = {
+  mobile: "320px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopM: "1440px",
+  desktop: "1920px",
+  ultrawide: "2560px",
+};
+
 export const HomeContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -10,16 +19,16 @@ export const HomeContainer = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 1rem;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+`;
 
 export const LinkContainer = styled.form`
-  width: 75%;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -28,24 +37,40 @@ export const LinkContainer = styled.form`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1rem;
   border-radius: 0.5rem;
+  @media screen and (min-width: ${size.tablet}) {
+    width: 60%;
+    padding: 1.5rem;
+  }
+  @media screen and (min-width: ${size.laptop}) {
+    width: 50%;
+  }
+  @media screen and (min-width: ${size.laptopM}) {
+    width: 40%;
+  }
+  @media screen and (min-width: ${size.desktop}) {
+    width: 30%;
+  }
+  @media screen and (min-width: ${size.ultrawide}) {
+    width: 25%;
+    padding: 2rem;
+  }
 `;
 
 export const OptionsContainer = styled.div`
-    width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 `;
 
 export const OnlyNumberOptionContainer = styled.div`
-    width: 100%;
-    padding: 0.5rem 0;
+  width: 100%;
+  padding: 0.5rem 0;
 `;
 
 export const OnlyLetterOptionContainer = styled.div`
-    width: 100%;
-    padding: 0.5rem 0;
+  width: 100%;
 `;
 
 export const LinkInput = styled.input`
@@ -53,10 +78,10 @@ export const LinkInput = styled.input`
   border-radius: 0.5rem;
   line-height: 1.5rem;
   padding: 0.5rem 2.5rem 0.5rem 1rem;
-  &:focus{
+  &:focus {
     outline: none !important;
     border: solid 1px #2463eb;
-    box-shadow: 0 0 10px #719ECE;   
+    box-shadow: 0 0 10px #719ece;
   }
 `;
 
@@ -64,7 +89,7 @@ export const SubmitButton = styled.button`
   width: 100%;
   appearance: button;
   backface-visibility: hidden;
-  background-color: #2463eb;
+  background-color: #4b5945;
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,

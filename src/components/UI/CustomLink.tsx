@@ -33,8 +33,14 @@ const CustomLink = ({onChange}: Props) => {
         <CustomLinkContainer>
             <Title title="Digite seu link personalizado:"/>
             <LinkContainer>
-                <Label text="mlink.me/"/>
-                <LinkInput type="text" placeholder="meu-link-personalizado" required onChange={(e) => onChange(e)}/>
+                <Label text="mnlnk.me/"/>
+                <LinkInput 
+                type="text" 
+                placeholder="meu-link-personalizado" 
+                required onChange={(e) => onChange(e)}
+                minLength={2}
+                maxLength={16}
+                />
             </LinkContainer>        
         </CustomLinkContainer>
     )
