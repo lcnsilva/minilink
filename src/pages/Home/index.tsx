@@ -4,6 +4,7 @@ import Select from "../../components/UI/Select";
 import Title from "../../components/UI/Title";
 import {
   HomeContainer,
+  InputErrorMessage,
   LinkContainer,
   LinkInput,
   LogoContainer,
@@ -19,6 +20,7 @@ import api from "../../services/api";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 import Success from "../../components/UI/Success";
+import getCustomErrorMessage from "../../services/inputValidityList";
 
 const Home = () => {
   const [showCustomLink, setShowCustomLink] = useState(false);
@@ -32,6 +34,7 @@ const Home = () => {
   const [shortUrl, setShortUrl] = useState("");
   const originRedirectUrl = "https://minilink-e0m7.onrender.com";
   const [success, setSuccess] = useState(false);
+  const [inputErrorMessage, setInputErrorMessage] = useState("");
 
   const handleReset = () => {
     setShowCustomLink(false);
@@ -82,6 +85,22 @@ const Home = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     try {
       event.preventDefault();
+      if (!customUrl && showCustomLink) {
+        toast.clearWaitingQueue();
+        toast.error("Preencha o campo link personalizado.");
+        return;
+      }
+
+      if (!originalUrl) {
+        const form = event.currentTarget;
+        const input = form.elements.namedItem(
+          "originalUrl"
+        ) as HTMLInputElement;
+
+        const message = getCustomErrorMessage(input);
+        setInputErrorMessage(message);
+        return;
+      }
       const endpoint = getEndpoint();
       const data = {
         originalUrl,
@@ -107,9 +126,17 @@ const Home = () => {
     setCustomUrl(event.target.value);
   };
 
+  const handleInputValidation = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const message = getCustomErrorMessage(event.currentTarget);
+    setInputErrorMessage(message);
+  };
+
   return (
     <HomeContainer>
       <ToastContainer
+        limit={1}
         position="bottom-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -126,16 +153,29 @@ const Home = () => {
         <Banner />
       </LogoContainer>
       {success ? (
-        <Success getOriginalUrl={originalUrl} getShortUrl={shortUrl} handleReset={handleReset}/>
+        <Success
+          getOriginalUrl={originalUrl}
+          getShortUrl={shortUrl}
+          handleReset={handleReset}
+        />
       ) : (
-        <LinkContainer onSubmit={handleSubmit}>
+        <LinkContainer onSubmit={handleSubmit} noValidate>
           <Title title="Insira sua URL:" />
           <LinkInput
             type="url"
-            placeholder="https://exemplo.com"
+            placeholder="https://www.exemplo.com"
+            onChange={(e) => {
+              setOriginalUrl(e.currentTarget.value);
+              setInputErrorMessage("");
+            }}
+            id="inputUrl"
+            onBlur={handleInputValidation}
+            name="originalUrl"
             required
-            onChange={(e) => setOriginalUrl(e.currentTarget.value)}
           />
+          <InputErrorMessage htmlFor="inputUrl">
+            {inputErrorMessage}
+          </InputErrorMessage>
           <OptionsContainer>
             <Title title="Opções:" />
             <ToggleOption

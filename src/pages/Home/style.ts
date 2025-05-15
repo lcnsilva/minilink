@@ -32,7 +32,7 @@ export const LinkContainer = styled.form`
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1rem;
@@ -80,9 +80,13 @@ export const LinkInput = styled.input`
   padding: 0.5rem 2.5rem 0.5rem 1rem;
   &:focus {
     outline: none !important;
-    border: solid 1px #2463eb;
-    box-shadow: 0 0 10px #719ece;
   }
+`;
+
+export const InputErrorMessage = styled.label`
+  color:red;
+  font-size: 0.9rem;
+  font-style: italic;
 `;
 
 export const SubmitButton = styled.button`
