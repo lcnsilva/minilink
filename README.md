@@ -1,54 +1,127 @@
-# React + TypeScript + Vite
+[JAVASCRIPT__BADGE]: https://img.shields.io/badge/Javascript-000?style=for-the-badge&logo=javascript
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-D4FAFF?style=for-the-badge&logo=typescript
+[REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
+[AXIOS__BADGE]: https://img.shields.io/badge/axios.js-854195?style=for-the-badge&logo=axios&logoColor=5A29E4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center" style="font-weight: bold;">EcoViva 🌱</h1>
 
-Currently, two official plugins are available:
+![react][REACT__BADGE]
+![javascript][JAVASCRIPT__BADGE]
+![typescript][TYPESCRIPT__BADGE]
+![axios][AXIOS__BADGE]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
 
-## Expanding the ESLint configuration
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> • 
+ <a href="#-começando">Começando</a> • 
+ <a href="#-stack-utilizada">Stacks Utilizadas</a> • 
+ <a href="#-rotas-da-aplicação">Rotas da Aplicação</a> • 
+ <a href="#-desenvolvedor-do-projeto">Desenvolvedor</a> •
+ <a href="#-contribua">Contribua</a>
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/3b65b736-55fe-4461-a540-0334a2383ccc" alt="Image Example" width="500px">
+</p>
+
+## 🧾 Sobre o Projeto
+
+**MiniLink** é um encurtador de URLs simples e eficiente, que permite aos usuários transformar links longos em versões curtas e fáceis de compartilhar.
+
+Recursos principais:
+
+- Encurtar URLs longas com apenas um clique
+- Redirecionamento automático ao acessar a URL curta
+- Opção de gerar link customizado
+- Opção de gerar link apenas com letras
+- Opção de gerar link apenas com números
+- Histórico de links criados
+
+
+Ideal para redes sociais, campanhas de marketing ou uso pessoal.
+
+👉[Clique aqui para ir ao repositório com a API do Minilink](https://github.com/lcnsilva/minilink-api)👈
+
+---
+
+## 🚀 Começando
+
+Para rodar o projeto localmente, siga os passos abaixo.
+
+
+Clone o projeto:
+
+```bash
+git clone https://github.com/lcnsilva/minilink.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Entre no diretório:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+cd minilink
 ```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor:
+
+```bash
+npm start
+```
+
+**Importante**: Para criar/carregar links é necessário rodar em conjunto a API do Minilink.
+
+---
+
+## 💻 Stack Utilizada
+- React
+- Styled-components
+- TypeScript
+
+---
+
+## 📍 Rotas da Aplicação
+
+| Rota                          | Descrição                                                                 |
+|------------------------------|---------------------------------------------------------------------------|
+| / | Pagina principal para criar o seu Minilink. |
+| /links | Mostra todos os Minilinks já criados e a quantidade de cliques (Essa função foi criada apenas para observação/testes)|
+| /notfound| Página utilizada como redirecionamento quando é utilizado um Minilink que não existe.|
+
+---
+
+## 🔐 Variáveis de Ambiente
+
+Crie um arquivo `.env` com as seguintes variáveis:
+
+```env
+VITE_API_URL="link da api || localhost:3000"
+```
+
+---
+
+## 👥 Desenvolvedor do Projeto
+
+<a href="https://github.com/lcnsilva/minilink/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=lcnsilva/minilink" />
+</a>
+
+[Luciano Silva](https://github.com/lcnsilva)
+
+---
+
+## 🤝 Contribua
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, forks ou pull requests.
+
+---
+
+## 📫 Contato
+
+Entre em contato comigo via email lcnsilvajf@gmail.com ou [linkedin](https://www.linkedin.com/in/lcnsilva/).
