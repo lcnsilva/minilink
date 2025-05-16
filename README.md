@@ -3,7 +3,7 @@
 [REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
 [AXIOS__BADGE]: https://img.shields.io/badge/axios.js-854195?style=for-the-badge&logo=axios&logoColor=5A29E4
 
-<h1 align="center" style="font-weight: bold;">EcoViva 🌱</h1>
+<h1 align="center" style="font-weight: bold;">Minilink 🔗</h1>
 
 ![react][REACT__BADGE]
 ![javascript][JAVASCRIPT__BADGE]
