@@ -21,6 +21,7 @@ import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 import Success from "../../components/UI/Success";
 import getCustomErrorMessage from "../../services/inputValidityList";
+import Footer from "../../components/UI/Footer";
 
 const Home = () => {
   const [showCustomLink, setShowCustomLink] = useState(false);
@@ -208,6 +209,7 @@ const Home = () => {
           <SubmitButton type="submit">Crie seu minilink</SubmitButton>
         </LinkContainer>
       )}
+      <Footer/>
     </HomeContainer>
   );
 };

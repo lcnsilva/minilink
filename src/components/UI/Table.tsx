@@ -67,9 +67,7 @@ const Table = () => {
       try {
         const response = await api.get("/api/clicks");
         setUrlList(response.data.UrlObject);
-        console.log(response);
       } catch (error) {
-        console.log(error);
         if (axios.isAxiosError(error)) {
           toast.error(`${error.response?.data.msg || error.message}`);
         }

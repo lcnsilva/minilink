@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Table from "../../components/UI/Table";
 import Logo from "../../components/UI/Logo";
+import Footer from "../../components/UI/Footer";
 
 const size = {
   mobile: "320px",
@@ -13,13 +14,12 @@ const size = {
 
 const LinksContainer = styled.div`
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f8fafc;
-  padding: 5rem 0;
 `;
 
 const TableContainer = styled.div`
@@ -59,6 +59,7 @@ const Links = () => {
       <TableContainer>
         <Table />
       </TableContainer>
+      <Footer/>
     </LinksContainer>
   );
 };

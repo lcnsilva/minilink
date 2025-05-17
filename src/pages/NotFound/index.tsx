@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 import Logo from "../../components/UI/Logo";
 import iconNotFoundCat from "../../assets/404_cat.jpg";
+import Footer from "../../components/UI/Footer";
 
 const size = {
   mobile: "320px",
@@ -15,7 +16,7 @@ const size = {
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -96,6 +97,7 @@ const NotFound = () => {
         </Description>
         <Button onClick={() => navigate("/")}>Voltar para o início</Button>
       </NotFoundContainer>
+      <Footer/>
     </Container>
   );
 };

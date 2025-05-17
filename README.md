@@ -79,10 +79,13 @@ npm start
 
 ---
 
-## 💻 Stack Utilizada
+## 💻 Tecnologias Utilizada
 - React
 - Styled-components
 - TypeScript
+- Axios
+- Toastify
+- React Router
 
 ---
 
