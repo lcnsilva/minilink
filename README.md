@@ -37,7 +37,8 @@ Recursos principais:
 - Opção de gerar link customizado
 - Opção de gerar link apenas com letras
 - Opção de gerar link apenas com números
-- Histórico de links criados
+- Histórico de todos os links criados (Função experimental apenas para testes).
+
 
 
 Ideal para redes sociais, campanhas de marketing ou uso pessoal.
